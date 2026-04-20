@@ -1,0 +1,398 @@
+:root {
+    --bg: #fafafa;
+    --text: #1a1a1a;
+    --accent: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.links a.cta {
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 4px;
+}
+
+/* Header - El Gancho */
+header {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.tagline {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    max-width: 800px;
+    line-height: 1.1;
+}
+
+h1 em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Proyectos */
+#proyectos {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+.img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #e0e0e0;
+    margin-bottom: 1.5rem;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .img-placeholder {
+    transform: scale(0.98);
+    background: #d4d4d4;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+footer {
+    padding: 5rem 10%;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Sección Sobre Mí */
+#sobre-mi {
+    padding: 10rem 10% 5rem 10%;
+    background-color: #f0f0f0; /* Un gris muy ligero para diferenciar la sección */
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    max-width: 600px;
+}
+
+.about-text strong {
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent);
+}
+
+.skills-wrapper h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    padding: 8px 16px;
+    border: 1px solid #dcdcdc;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.skills-grid span:hover {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer; /* Esto pone la manito en toda la tarjeta */
+}
+
+.product-premium:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.product-premium {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    max-width: 350px;
+    transition: all 0.3s ease;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Importante para que el link ocupe espacio */
+}
+
+.product-image-container {
+    background: #f3f3f3;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img {
+    width: 100%;       /* Ocupa el ancho del contenedor */
+    height: auto;      /* Mantiene la proporción */
+    display: block;    /* Evita espacios en blanco extra */
+}
+
+.product-details {
+    padding: 20px;
+    background: #fff;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.product-shipping {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/*div number2 
+/* Estilos específicos para la tarjeta de habilidades */
+.skills-bg {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    height: 250px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills-visual {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-badge {
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 2px; /* Cuadrado para seguir la estética Adidas */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-list {
+    margin: 15px 0;
+}
+
+.skill-item {
+    margin-bottom: 12px;
+}
+
+.skill-item span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+}
+
+.skill-bar .fill {
+    height: 100%;
+    background: #1a1a1a; /* Barra negra minimalista */
+    border-radius: 2px;
+}
+
+.inventory-card {
+    max-width: 450px !important;
+    border: 1px solid #1a1a1a !important;
+}
+
+.inventory-inputs {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.inventory-inputs input {
+    border: 1px solid #eee;
+    padding: 10px;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.add-btn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.table-container {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.minimal-table th {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: #888;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.minimal-table td {
+    padding: 12px 0;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #fafafa;
+}
+
+.status-warn { color: #ff3b30; font-weight: bold; text-transform: uppercase; font-size: 0.6rem; }
+.status-safe { color: #34c759; font-weight: bold; text-transform: uppercase; font-size: 0.6rem; }
+
+.btn-alerta {
+    background: #ff3b30;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    animation: palpitar 1.5s infinite;
+}
+
+@keyframes palpitar {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.contenedor-proyectos {
+    display: flex;          /* Los pone uno al lado del otro */
+    flex-wrap: wrap;       /* Si la pantalla es pequeña (celular), pone uno abajo del otro */
+    gap: 20px;             /* Espacio exacto entre las dos tarjetas */
+    justify-content: center; /* Los centra en la pantalla */
+    align-items: stretch;   /* HACE QUE MIDAN LO MISMO DE ALTO AUTOMÁTICAMENTE */
+    padding: 20px;
+}
+
+.project-card {
+    flex: 1;               /* Hace que ambas tarjetas crezcan igual para ocupar el espacio */
+    min-width: 320px;      /* Evita que se encojan demasiado */
+    max-width: 450px;      /* Evita que se vean gigantes en pantallas muy anchas */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido interno hacia abajo */
+}
+
