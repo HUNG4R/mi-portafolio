@@ -42,24 +42,51 @@
         </div>
 
         <div class="project-card product-premium inventory-card">
-            <div class="product-details">
-                <h3 class="product-title">Gestión de Stock & Vencimientos</h3>
-                <div class="inventory-inputs">
-                    <input type="text" id="p-nombre" placeholder="Producto...">
-                    <input type="date" id="p-fecha">
-                    <button onclick="agregarAlInventario()" class="add-btn">Añadir</button>
+    <div class="product-details">
+        <h3 class="product-title">Gestión de Stock</h3>
+        
+        <div class="inventory-inputs">
+            <div class="input-row">
+                <div class="input-group">
+                    <input type="text" id="p-nombre" placeholder="Producto (ej: Gatorade)">
                 </div>
-                <div class="table-container">
-                    <table class="minimal-table">
-                        <thead>
-                            <tr><th>ITEM</th><th>VENCE</th><th>ESTADO</th></tr>
-                        </thead>
-                        <tbody id="tabla-cuerpo"></tbody>
-                    </table>
+                <div class="input-group" style="max-width: 100px;">
+                    <input type="number" id="p-cantidad" placeholder="Cant.">
                 </div>
-                <p id="mensaje-alerta" class="product-shipping">Sistema activo</p>
             </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="p-fecha-llegada">Fecha de Llegada</label>
+                    <input type="date" id="p-fecha-llegada">
+                </div>
+                <div class="input-group">
+                    <label for="p-fecha-vence">Fecha de Vencimiento</label>
+                    <input type="date" id="p-fecha-vence">
+                </div>
+            </div>
+            
+            <button onclick="agregarAlInventario()" class="add-btn">Registrar Entrada</button>
         </div>
+
+        <div class="table-container">
+            <table class="minimal-table">
+                <thead>
+                    <tr>
+                        <th>PRODUCTO</th>
+                        <th>VENCE</th>
+                        <th>ESTADO</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-cuerpo"></tbody>
+            </table>
+        </div>
+        <div id="contenedor-alerta" style="text-align: center; margin-top: 20px;">
+    <p id="mensaje-alerta" class="product-shipping">SISTEMA DE MONITOREO ACTIVO</p>
+</div>
+    </div>
+</div>
+</div>
 
     </div> </section>
 </div>

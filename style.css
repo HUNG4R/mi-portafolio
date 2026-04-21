@@ -396,3 +396,177 @@ footer {
     flex-direction: column; /* Organiza el contenido interno hacia abajo */
 }
 
+/* --- INVENTORY CARD: MINIMALISMO PREMIUM --- */
+
+/* --- INVENTORY CARD: MINIMALISMO PREMIUM --- */
+
+.inventory-card {
+    background: #ffffff;
+    border: 1px solid #e1e1e1 !important; /* Borde muy sutil */
+    border-radius: 12px; /* Esquinas suavizadas */
+    padding: 32px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Sombra casi invisible */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inventory-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+}
+
+/* Título con estilo editorial */
+.inventory-card .product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    border: none; /* Quitamos la línea para que sea más limpio */
+}
+
+/* Organización de los inputs */
+.inventory-card .inventory-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inventory-card .input-row {
+    display: flex;
+    gap: 16px;
+}
+
+.inventory-card .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Etiquetas minimalistas */
+.inventory-card .input-group label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    margin-bottom: 8px;
+    letter-spacing: 1.2px;
+}
+
+/* Inputs con estilo "Ghost" */
+.inventory-card input {
+    border: 1px solid #efefef;
+    background: #f9f9f9;
+    padding: 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    color: #333;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inventory-card input:focus {
+    outline: none;
+    background: #fff;
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.02);
+}
+
+/* Botón sólido y elegante */
+.inventory-card .add-btn {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.inventory-card .add-btn:hover {
+    background: #000;
+    letter-spacing: 3px; /* Efecto sutil al pasar el mouse */
+}
+
+/* Tabla refinada */
+.inventory-card .table-container {
+    margin-top: 32px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.inventory-card .minimal-table th {
+    font-size: 0.6rem;
+    color: #bbb;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+}
+
+.inventory-card .minimal-table td {
+    padding: 16px 0;
+    font-size: 0.85rem;
+    color: #444;
+    border-bottom: 1px solid #fcfcfc;
+}
+
+/* Estados de color sutiles */
+.status-warn { 
+    color: #d9534f; 
+    font-weight: 700; 
+    font-size: 0.65rem; 
+    background: rgba(217, 83, 79, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.status-safe { 
+    color: #2ecc71; 
+    font-weight: 700; 
+    font-size: 0.65rem;
+    background: rgba(46, 204, 113, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Mensaje de sistema inferior */
+.inventory-card #mensaje-alerta {
+    margin-top: 24px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #ccc;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-alerta {
+    background: #ff3b30; /* Rojo vibrante */
+    color: white !important;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
+    animation: palpitar 1.5s infinite;
+    transition: all 0.3s ease;
+}
+
+.btn-alerta:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+@keyframes palpitar {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(255, 59, 48, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3); }
+}
