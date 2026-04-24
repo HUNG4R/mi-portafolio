@@ -128,3 +128,18 @@ function calificar(nivel) {
         msg.innerText = "¡Gracias por tu feedback! Seguiré mejorando cada día.";
     }
 }
+function actualizarMetricas() {
+    // Simulamos que obtenemos datos de una base de datos
+    const ventas = Math.floor(Math.random() * 5000000);
+    const conversion = (Math.random() * 10).toFixed(1);
+
+    document.getElementById('m-ventas').innerText = `$${ventas.toLocaleString()}`;
+    document.getElementById('m-conversion').innerText = `${conversion}%`;
+
+    // Animamos las barras del gráfico
+    const barras = document.querySelectorAll('.bar');
+    barras.forEach(bar => {
+        const nuevaAltura = Math.floor(Math.random() * 100) + 10;
+        bar.style.height = `${nuevaAltura}%`;
+    });
+}

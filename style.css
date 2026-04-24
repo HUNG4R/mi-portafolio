@@ -448,3 +448,149 @@ footer p {
         padding: 60px 10% !important;
     }
 }
+/* --- AJUSTES DE RESPONSIVIDAD (MOBILE & TABLET) --- */
+
+@media (max-width: 768px) {
+    /* 1. Navegación: Los links se ven mal en celular si están a la derecha */
+    nav {
+        flex-direction: column;
+        padding: 1.5rem 5%;
+        gap: 1.5rem;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .links a {
+        margin: 0 10px; /* Reducimos el espacio entre links */
+        font-size: 0.8rem;
+    }
+
+    /* 2. Header: Ajustamos el texto para que no se corte */
+    header {
+        height: auto;
+        padding: 80px 5%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Un poco más pequeño para evitar saltos raros */
+    }
+
+    /* 3. Proyectos: Pasamos de 2 columnas a 1 columna */
+    #proyectos {
+        padding: 3rem 5%;
+    }
+
+    .contenedor-proyectos {
+        grid-template-columns: 1fr !important; /* Una sola tarjeta por fila */
+        gap: 30px;
+    }
+
+    /* 4. Ajustes de tarjetas específicas */
+    .product-image-container {
+        height: 200px; /* Reducimos la altura de la imagen de la raqueta */
+    }
+
+    .inventory-card {
+        padding: 20px !important;
+    }
+
+    .input-row {
+        flex-direction: column; /* Inputs uno sobre otro en móvil */
+    }
+
+    /* 5. Tabla de inventario: Hacemos que se pueda scrollear lateralmente si es muy ancha */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .minimal-table {
+        min-width: 300px; 
+    }
+
+    /* 6. Sección Sobre mí */
+    #sobre-mi .about-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Ajustes para pantallas medianas (Tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav, header, #proyectos, #sobre-mi {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .contenedor-proyectos {
+        gap: 20px;
+    }
+}
+
+.business-dashboard {
+    background: #1a1a1a !important; /* Estilo oscuro para que resalte */
+    color: white;
+}
+
+.dashboard-preview {
+    padding: 20px;
+    background: #252525;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.metric-item {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-item span {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 120px;
+    padding-top: 20px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 15%;
+    background: var(--success);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 1s ease;
+}
+
+.bar::after {
+    content: attr(data-day);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    color: #666;
+}

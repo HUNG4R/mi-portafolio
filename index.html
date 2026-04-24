@@ -128,6 +128,43 @@
             <p id="feedback-msg" style="margin-top: 10px; font-weight: bold;"></p>
         </div>
     </div>
+    </div>
+    <div class="project-card business-dashboard">
+    <div class="project-info">
+        <span class="badge">Data & Analytics</span>
+        <h3>Panel de Control Corporativo</h3>
+        <p class="project-doc">
+            <strong>Arquitectura:</strong> Interfaz reactiva con persistencia en <em>LocalStorage</em>. 
+            Simula el consumo de una API mediante lógica de generación aleatoria estructurada.
+        </p>
+    </div>
+
+    <div class="dashboard-preview">
+        <div class="metrics-grid">
+            <div class="metric-item">
+                <span>Ventas Totales</span>
+                <h4 id="m-ventas">$0</h4>
+            </div>
+            <div class="metric-item">
+                <span>Conversión</span>
+                <h4 id="m-conversion">0%</h4>
+            </div>
+        </div>
+        
+        <div class="chart-container" id="grafico-barras">
+            <div class="bar" style="height: 10%" data-day="Lun"></div>
+            <div class="bar" style="height: 10%" data-day="Mar"></div>
+            <div class="bar" style="height: 10%" data-day="Mie"></div>
+            <div class="bar" style="height: 10%" data-day="Jue"></div>
+            <div class="bar" style="height: 10%" data-day="Vie"></div>
+        </div>
+
+        <button onclick="actualizarMetricas()" class="add-btn">Sincronizar Datos</button>
+    </div>
+
+    <div class="future-roadmap">
+        <p><strong>Próxima fase:</strong> Sustitución de generador local por <code>Fetch API</code> para integración con bases de datos SQL.</p>
+    </div>
 </div>
     </div> </section>
 
